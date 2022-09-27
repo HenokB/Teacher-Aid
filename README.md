@@ -9,7 +9,15 @@ It solves the problem of teachers by generating questions. It uses the Cohere AI
 
 📌Cohere NLP 
 
-📌Telegram BOT API 
+
+# How to run the project?
+
+1. Clone
+ `git clone https://github.com/HenokB/Teacher-Aid.git`
+2. Install all the dependencies using `yarn` or `npm`
+3. Run `npm start` or `yarn start` in the root dir to start the server
+- Make sure to add your Cohere AI Key, in the `server/index.js` file
+4. Run `npm start` or `yarn start` in the client dir and it will host the app on `localhost:3000`
 
 # Demo
 
