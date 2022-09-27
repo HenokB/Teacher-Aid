@@ -3,10 +3,13 @@
 It solves the problem of teachers by generating questions. It uses the Cohere AI NLP model, by taking a topic as an input from the user.
 
 # Tech stack used
-📌Express JS \n
-📌Node JS \n
-📌Cohere NLP \n
-📌Telegram BOT API \n
+📌Express JS
+
+📌Node JS 
+
+📌Cohere NLP 
+
+📌Telegram BOT API 
 
 # Demo
 
