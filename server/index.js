@@ -2,6 +2,8 @@
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
+const { cohere_api_key } = process.env;
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 app.use(cors());
@@ -12,7 +14,7 @@ app.listen(PORT, () => {
 
 
 const cohere = require('cohere-ai');
-cohere.init('{api key}'); // insert your api key from cohere here
+cohere.init({cohere_api_key}); // insert your api key from cohere here
 
 app.get('/api', async (req, res) => {
   const response = await cohere.generate({
