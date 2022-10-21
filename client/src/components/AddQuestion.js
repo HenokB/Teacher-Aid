@@ -8,7 +8,7 @@ export default function AddTodo() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (title !== "") {
-      await addDoc(collection(db, "questions"), {
+      await addDoc(collection(db, "todos"), {
         title,
         completed: false,
       });
