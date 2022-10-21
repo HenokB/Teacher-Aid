@@ -24,10 +24,13 @@ import {
 import { db } from "./firebase";
 import 'reactjs-popup/dist/index.css';
 const PopupExample = () => (
-  <Popup trigger={<button>How it works?</button>} position="top left">
+  <Popup trigger={<button>How it works?</button>} position="center">
     {close => (
       <div>
-        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"/>
+         1. Enter a topic you want to generate question for <br></br>
+         2. Click generate <br></br>
+         3. Output will display<br></br>
+         4. If you want to save, add your question and save<br></br>
         <a className="close" onClick={close}>
           &times;
         </a>
@@ -45,7 +48,7 @@ function App() {
     { name: 'Why?', description: 'It saves the precious time of teachers to create questions' },
     { name: 'Store', description: 'Not only it will save time but teachers can also save questions and check them later' },
     { name: 'How?', description: 'To create the questions, it uses a huge dataset backed natural language processing model.' },
-    { name: 'Finish', description: 'Hand sanded and finished with natural oil' },
+    { name: 'Share', description: 'You can also share it with just a click' },
       ]
 
   const API_URL = "http://localhost:3001";
@@ -213,30 +216,13 @@ function App() {
     </div>
      
       <div className="bg-gray-50">
-      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          <span className="block">Ready to dive in?</span>
-          <span className="block text-indigo-600">Start for free now.</span>
-        </h2>
-        <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-          <div className="inline-flex rounded-md shadow">
-            <a
-              href="#create"
-              className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700"
-            >
-              Get started
-            </a>
           </div>
-          
-        </div>
-      </div>
-    </div>
     <div>
     
-    <div id="popup-root" />
+    
   </div>
       <header>
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
        
           <img
             className="h-40 w-30 items-center"
@@ -247,7 +233,7 @@ function App() {
             “If you have to put someone on a pedestal, put teachers. They are
             society’s heroes. – Guy Kawasaki
           </p>
-        </div>
+        </div> */}
         
 
         <div className="bg-white">
@@ -293,19 +279,22 @@ function App() {
       </div>
     </div>        
  
-<div id="create">
+
+
+
+      <div id="create" className=" mx-auto grid max-w-2xl grid-cols-1 items-center">
         <h1 className="text-center mb-4 font-mono text-3xl text-gray-700/70">
           Create Questions 
         </h1>
         <form onSubmit={handleSubmit}>
           <label
             htmlFor="comment"
-            className="block text-sm font-medium text-gray-700"
+            className="items-center block text-sm font-medium text-gray-700"
           >
             Give me a topic <br></br>
             E.g. Inorganic Chemistry
           </label>
-          <div className="mt-1">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 items-center">
             <textarea
               rows={4}
               name="comment"
@@ -322,7 +311,7 @@ function App() {
           />
         </form>
         </div>
-        <div className="rounded-md mt-4 bg-blue-50 p-4">
+        <div className="rounded-md mt-4 bg-blue-50 p-4 mx-auto grid max-w-2xl grid-cols-1 items-center">
           <div className="flex">
             <div className="ml-3 flex-1 md:flex md:justify-between">
               <p className="text-sm text-blue-700">
@@ -337,13 +326,15 @@ function App() {
           
         </div>
       </header>
-
+      <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+              Do you want to save your questions?
+      </h2>
       
 
-      <div className="mt-1">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center">
         <AddQue />
       </div>
-          <div className="todo_container">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 items-center">
               {todos.map((todo) => (
               <Todo
                 key={todo.id}
