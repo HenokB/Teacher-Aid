@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-const { apiKey, authDomain, projectId, storageBucket, messagingSenderId, appId } = process.env;
 // Make sure to add your Firebase configuration below here
 const firebaseConfig = {
   apiKey: "AIzaSyAlv-G_GN6rQNk9Sc_redEjXwJDkdKIvKo",
