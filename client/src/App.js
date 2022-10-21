@@ -209,7 +209,7 @@ function App() {
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full"
-          src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          src="https://th.bing.com/th/id/R.32b88274cc7cd521b05fbaad65649a68?rik=QMOmEgyhLJiAuw&pid=ImgRaw&r=0"
           alt=""
         />
       </div>
@@ -348,8 +348,8 @@ function App() {
             />
           ))}
       </div>
-      <footer className="">
-        <p className="text-center mt-4 mb-5 font-mono text-1x1 text-black-700/70">Teachers Aid 2022</p>
+      <footer className="footer">
+        <p className="text-center mt-4 mb-5 font-mono text-1x1 text-black-700/70">© 2022 Teachers Aid. All rights reserved.</p>
       </footer>
     </div>
   );
