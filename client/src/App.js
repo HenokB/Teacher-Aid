@@ -235,9 +235,12 @@ function App() {
           </p>
         </div> */}
         
-
+        <h1 className="text-center  mt-9 font-mono text-3xl text-gray-700/70">
+          Features
+        </h1>
         <div className="bg-white">
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+      
         <div>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Teacher's Aid</h2>
           <p className="mt-4 text-gray-500">
@@ -326,15 +329,15 @@ function App() {
           
         </div>
       </header>
-      <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-              Do you want to save your questions?
-      </h2>
+      <h1 className="text-center  mt-4 mb-4 font-mono text-3xl text-gray-700/70">
+          Do you want to save questions?
+        </h1>
       
 
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-center">
         <AddQue />
       </div>
-          <div className="mx-auto grid max-w-2xl grid-cols-1 items-center">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 items-center space-4">
               {todos.map((todo) => (
               <Todo
                 key={todo.id}
@@ -345,8 +348,8 @@ function App() {
             />
           ))}
       </div>
-      <footer>
-        <p className="text-center mb-2 font-mono text-3xl text-gray-700/70">Teachers Aid 2022</p>
+      <footer className="">
+        <p className="text-center mt-4 mb-5 font-mono text-1x1 text-black-700/70">Teachers Aid 2022</p>
       </footer>
     </div>
   );

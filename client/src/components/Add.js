@@ -24,18 +24,18 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,})
       <div>
         <button
           hover="Complete"
-          className="px-3 py-1 mt-2 rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 cursor-pointer"
+          className="mr-3 ml-3 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           onClick={() => toggleComplete(todo)}
         >
           <>Complete✅</>
         </button>
         <button
-          className="px-3 py-1 mt-2 rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 cursor-pointer"
+          className="mr-3 ml-3 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           onClick={() => handleEdit(todo, newTitle)}
         >
           <>Edit📝</>
         </button>
-        <button className="px-3 py-1 mt-2 rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 cursor-pointer" onClick={() => handleDelete(todo.id)}>
+        <button className="mr-3 ml-3 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" onClick={() => handleDelete(todo.id)}>
         <>Delete🗑</>
         </button>
         
