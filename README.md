@@ -30,11 +30,17 @@ Next go to `cohere.ai` and get an api key and put it inside the `server/index.js
 
 ## 📸 Screenshots
 
-![Screenshot 2022-10-21 160321](https://user-images.githubusercontent.com/46082799/197202383-d385b9d9-b01d-4b91-8f84-165e32a98f02.jpg)
+### Laning page
 ![Screenshot 2022-10-21 153317](https://user-images.githubusercontent.com/46082799/197202393-ad8d2ee4-fb21-462e-a10d-069bf4b31f75.jpg)
+
+### Question generation in action
 ![Screenshot 2022-10-21 160157](https://user-images.githubusercontent.com/46082799/197202407-d2a0f9ba-7067-4284-9b1d-110f156c204f.jpg)
+
+### Save questions
 ![Screenshot 2022-10-21 160240](https://user-images.githubusercontent.com/46082799/197202418-d344183d-37f7-4d94-a2bf-6bf33f5971ec.jpg)
 
-![Screenshot 2022-09-27 184505](https://user-images.githubusercontent.com/46082799/192576120-6c82e5f9-452d-4f9f-9fde-f6882010ca82.jpg)
+### Sharing screen
+![Screenshot 2022-10-21 160321](https://user-images.githubusercontent.com/46082799/197202383-d385b9d9-b01d-4b91-8f84-165e32a98f02.jpg)
+
 
 © 2022 Henok Ademtew
