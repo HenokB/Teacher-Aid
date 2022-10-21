@@ -14,8 +14,6 @@ import { db } from "./firebase";
 
 function App() {
   const API_URL = "http://localhost:3001";
-
-
   const [data, setData] = useState(null);
   const [prompt, setPrompt] = useState("");
 
@@ -158,6 +156,9 @@ function App() {
             />
           ))}
       </div>
+      <footer>
+        <p className="text-center mb-2 font-mono text-3xl text-gray-700/70">Teachers Aid 2022</p>
+      </footer>
     </div>
   );
 }
