@@ -1,10 +1,25 @@
-# To get started with the frontend
+# To get started with the frontend, you can use two ways
+
+## 1. Using Docker 🐳
+
+### 📌 Pre-requisites
+- docker
+- docker-compose (which usually comes along with docker but if it's not the case then yeah)
+
+### 📌 Steps 
+- Clone the repository using git clone 
+```https://github.com/HenokB/Teacher-Aid.git``` 
+- Run `docker-compose up`
+- Now it will start running and you can go to http://localhost:3000/ from your browser and it would render dev tools in your browser
+
+## 2 Using NPM or YARN
+
 
 ### 1. `git clone https://github.com/HenokB/Teacher-Aid.git`
 
 ### 2. navigate to the client folder using `cd client`
 
-### 3.run `npm start`
+### 3. run `npm start`
 
 
 Runs the app in the development mode.\
@@ -12,23 +27,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
