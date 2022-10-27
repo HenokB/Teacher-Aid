@@ -1,5 +1,17 @@
 # Teacher's Aid 🧾
 
+<p align="center">
+   <a href="#contributors"><img src="https://img.shields.io/github/contributors/HenokB/Teacher-Aid.svg?color=c0c8d0"></a>
+   <a href="https://github.com/HenokB/Teacher-Aid/stargazers"><img src="https://img.shields.io/github/stars/HenokB/Teacher-Aid?color=e4b442" alt="Github Stars"></a>
+
+   <a href="https://github.com/HenokB/Teacher-Aid/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-9d2235" alt="License"></a>
+   <a href="https://github.com/HenokB/Teacher-Aid/commits/main"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/HenokB/Teacher-Aid?color=8b55e3"/></a> 
+</p>
+
+
+![Group 1](https://user-images.githubusercontent.com/46082799/198262471-9bf42ad7-91f0-4231-8438-221270bf84f5.png)
+
+
 Teacher's Aid is a web-application that allows teachers to create questions using natural language processing and recieve anonymous feedback from students. The application uses modern frontend and backed development tools. The application handles user authentication and uses nlp to create the questions.
 
 
@@ -56,7 +68,7 @@ Teacher's Aid is a web-application that allows teachers to create questions usin
 
 #### ⚠️ Don't forget to Run both the client and server at the same time in two different terminals.
 
-## 📸 Screenshots
+## Screenshots 📸
 
 ### Laning page
 ![Screenshot 2022-10-21 153317](https://user-images.githubusercontent.com/46082799/197202393-ad8d2ee4-fb21-462e-a10d-069bf4b31f75.jpg)
