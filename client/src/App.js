@@ -7,7 +7,6 @@ import img1 from "./assets/1.jpg"
 import img2 from "./assets/2.jpg"
 import img3 from "./assets/3.jpg"
 import img4 from "./assets/4.jpg"
-import Popup from 'reactjs-popup';
 import { Popover, Transition } from '@headlessui/react'
 import Todo from "./components/Add";
 import {
@@ -22,19 +21,6 @@ import { db } from "./firebase";
 import 'reactjs-popup/dist/index.css';
 import Modal from "./Modal";
 
-
-const PopupInfo = () => (
-  <Popup trigger={<button>How it works?</button>} position="center" className="mx-auto grid max-w-2xl grid-cols-1 items-center">
-    {close => (
-      <div>
-        
-        <a className="close" onClick={close}>
-          &times;
-        </a>
-      </div>
-    )}
-  </Popup>
-);
 function App() {
   const [date, setDate] = useState(new Date());  
   const features = [
@@ -84,9 +70,7 @@ function App() {
     await deleteDoc(doc(db, "todos", id));
   };
   return (
-
-    
-    <div className="relative overflow-hidden bg-white">
+  <div className="relative overflow-hidden bg-white">
     <div className="relative overflow-hidden bg-white">
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 bg-white pb-8 sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32">
@@ -106,8 +90,7 @@ function App() {
                 <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
                   <div className="flex w-full items-center justify-between md:w-auto">
                     <a href="#">
-                      <span className="sr-only">Teachers Aid</span>
-                      <p className="text-indigo-700">Teachers Aid ✏️</p>
+                      <p className="text-indigo-700 text-2xl font-bold">Teachers Aid 📚</p>
                     </a>
                     
                   </div>
