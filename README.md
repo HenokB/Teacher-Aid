@@ -1,12 +1,11 @@
-# Teacher's Aid 🧾
+# Teacher's Aid 🧾</br>
 
 <p align="center">
    <a href="#contributors"><img src="https://img.shields.io/github/contributors/HenokB/Teacher-Aid.svg?color=c0c8d0"></a>
    <a href="https://github.com/HenokB/Teacher-Aid/stargazers"><img src="https://img.shields.io/github/stars/HenokB/Teacher-Aid?color=e4b442" alt="Github Stars"></a>
-
    <a href="https://github.com/HenokB/Teacher-Aid/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-9d2235" alt="License"></a>
    <a href="https://github.com/HenokB/Teacher-Aid/commits/main"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/HenokB/Teacher-Aid?color=8b55e3"/></a> 
-</p>
+</p> </br>
 
 
 ![Group 1](https://user-images.githubusercontent.com/46082799/198262471-9bf42ad7-91f0-4231-8438-221270bf84f5.png)
