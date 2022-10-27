@@ -1,4 +1,4 @@
-# Teacher's Aid
+# Teacher's Aid 🧾
 
 Teacher's Aid is a web-application that allows teachers to create questions using natural language processing and recieve anonymous feedback from students. The application uses modern frontend and backed development tools. The application handles user authentication and uses nlp to create the questions.
 
@@ -12,21 +12,49 @@ Teacher's Aid is a web-application that allows teachers to create questions usin
 
 - [Cohere AI](https://cohere.ai/) - Cohere provides access to advanced Large Language Models and NLP tools through one easy-to-use API. 
 
+- [Firebase](https://firebase.google.com/) - Firebase is a product of Google which helps developers to build, manage, and grow their apps easily.
+
+- [Docker](https://www.docker.com) - Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. 
+
+- [Vercel](https://vercel.com/) - Vercel is a cloud platform as a service company which hosts and deploys apps.
+
 
 ## How to run the project?
+## 1. Using Docker 🐳 (Only Client Side)
 
-To run the project make sure to create an empty firebase project and get all the keys. After getting all the config keys add them in the firebase.js file.
+### 📌 Pre-requisites
+- docker
+- docker-compose (which usually comes along with docker but if it's not the case then yeah)
 
-Next go to `cohere.ai` and get an api key and put it inside the `server/index.js` file
+### 📌 Steps 
+- Clone the repository using git clone 
+```https://github.com/HenokB/Teacher-Aid.git``` 
+- Navigate to the client `cd client`
+- Create an empty firebase project and get all the keys and add them in the `firebase.js` file.
+- Run `docker-compose up`
+- Now it will start running and you can go to http://localhost:3000/ from your browser and it would render dev tools in your browser.
 
 
-1. To Clone
- ```git clone https://github.com/HenokB/Teacher-Aid.git```
-2. Install all the dependencies using `yarn` or `npm`
-3. Run `npm start` or `yarn start` in the root dir to start the server
-- Make sure to add your Cohere AI Key, in the `server/index.js` file
-4. Run `npm start` or `yarn start` in the client dir and it will host the app on `localhost:3000`
+## 2 Using NPM or YARN 📦
 
+
+- `git clone https://github.com/HenokB/Teacher-Aid.git`
+
+- navigate to the client folder using `cd client`
+
+- Create an empty firebase project and get all the keys and add them in the `firebase.js` file.
+
+- run `npm start`, it will start running and you can go to http://localhost:3000/
+
+
+## For the backend🔌
+
+1. Make sure you are in the root directory.
+2. Go to `cohere.ai` and get an API key. Put it inside the `server/index.js` file.
+2. Install all the dependencies using `yarn install` or `npm i`
+3. Run `npm start` or `yarn start` in the root dir. This will launch the backend in `localhost:3001`
+
+#### ⚠️ Don't forget to Run both the client and server at the same time in two different terminals.
 
 ## 📸 Screenshots
 
