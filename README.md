@@ -11,7 +11,7 @@
 ![Group 1](https://user-images.githubusercontent.com/46082799/198262471-9bf42ad7-91f0-4231-8438-221270bf84f5.png)
 
 
-Teacher's Aid is a web-application that allows teachers to create questions using natural language processing and recieve anonymous feedback from students. The application uses modern frontend and backed development tools. The application handles user authentication and uses nlp to create the questions.
+Teacher's Aid is a web-application that allows teachers to create questions using natural language processing and save those questions to review at any time. The application uses modern frontend and backed development tools. The application handles calendar, database queries and nlp to create the questions.
 
 
 ## Built With 🛠
