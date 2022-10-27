@@ -1,4 +1,6 @@
 import "./App.css";
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 import { useEffect, useState } from "react";
 import AddQue from "./components/AddQuestion";
 import img1 from "./assets/1.jpg"
@@ -21,8 +23,8 @@ import 'reactjs-popup/dist/index.css';
 
 
 
-const PopupExample = () => (
-  <Popup trigger={<button>How it works?</button>} position="center">
+const PopupInfo = () => (
+  <Popup trigger={<button>How it works?</button>} position="center" className="mx-auto grid max-w-2xl grid-cols-1 items-center">
     {close => (
       <div>
          1. Enter a topic you want to generate question for <br></br>
@@ -37,18 +39,13 @@ const PopupExample = () => (
   </Popup>
 );
 function App() {
-  const navigation = [
-    
-  ]
-  
-  
+  const [date, setDate] = useState(new Date());  
   const features = [
     { name: 'Why?', description: 'It saves the precious time of teachers to create questions' },
     { name: 'Store', description: 'Not only it will save time but teachers can also save questions and check them later' },
     { name: 'How?', description: 'To create the questions, it uses a huge dataset backed natural language processing model.' },
     { name: 'Share', description: 'You can also share it with just a click' },
       ]
-
   const API_URL = "http://localhost:3001";
   const [data, setData] = useState(null);
   const [prompt, setPrompt] = useState("");
@@ -137,7 +134,7 @@ function App() {
                     href="#"
                     className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"
                   >
-                    <PopupExample />
+                    <PopupInfo />
                   </a>
                 </div>
                 
@@ -162,7 +159,7 @@ function App() {
     
   </div>
       <header>
-        <h1 className="text-center  mt-9 font-mono text-3xl text-gray-700/70">
+        <h1 className="text-center  mt-9 font-mono text-3xl text-indigo-600">
           Features
         </h1>
         <div className="bg-white">
@@ -210,10 +207,35 @@ function App() {
     </div>        
  
 
+        <div className=" mx-auto grid max-w-2xl items-center mb-4">
+        <h1 className="text-center mb-4 font-mono text-3xl text-indigo-600">
+          Check dates 
+        </h1>
+        <div className=' mx-auto grid max-w-2xl items-center font-mono '>
+        <Calendar
+          onChange={setDate}
+          value={date}
+          selectRange={true}
+        />
+      </div>
+      {date.length > 0 ? (
+        <p className='text-center font-mono'>
+          <span className='font-mono text-green-700 bold'>Start:</span>{' '}
+          {date[0].toDateString()}
+          &nbsp;|&nbsp;
+          <span className='font-mono text-red-700 bold'>End:</span> {date[1].toDateString()}
+        </p>
+      ) : (
+        <p className='text-center px-3 py-1 mt-2 rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 cursor-pointer'>
+          <span className='bold'>Selected date:</span>{' '}
+          {date.toDateString()}
+        </p>
+      )}
+    </div>
 
 
       <div id="create" className=" mx-auto grid max-w-2xl grid-cols-1 items-center">
-        <h1 className="text-center mb-4 font-mono text-3xl text-gray-700/70">
+        <h1 className="text-center mb-4 font-mono text-3xl text-indigo-600">
           Create Questions 
         </h1>
         <form onSubmit={handleSubmit}>
@@ -256,7 +278,7 @@ function App() {
           
         </div>
       </header>
-      <h1 className="text-center  mt-4 mb-4 font-mono text-3xl text-gray-700/70">
+      <h1 className="text-center  mt-4 mb-4 font-mono text-3xl text-indigo-600">
           Do you want to save questions?
         </h1>
       
@@ -275,6 +297,7 @@ function App() {
             />
           ))}
       </div>
+      
       <footer className="footer">
         <p className="text-center mt-4 mb-5 font-mono text-1x1 text-black-700/70">© 2022 Teachers Aid. All rights reserved.</p>
       </footer>
