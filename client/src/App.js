@@ -20,17 +20,14 @@ import {
 } from "firebase/firestore";
 import { db } from "./firebase";
 import 'reactjs-popup/dist/index.css';
-
+import Modal from "./Modal";
 
 
 const PopupInfo = () => (
   <Popup trigger={<button>How it works?</button>} position="center" className="mx-auto grid max-w-2xl grid-cols-1 items-center">
     {close => (
       <div>
-         1. Enter a topic you want to generate question for <br></br>
-         2. Click generate <br></br>
-         3. Output will display<br></br>
-         4. If you want to save, add your question and save<br></br>
+        
         <a className="close" onClick={close}>
           &times;
         </a>
@@ -49,7 +46,7 @@ function App() {
   const API_URL = "http://localhost:3001";
   const [data, setData] = useState(null);
   const [prompt, setPrompt] = useState("");
-
+  
   const handleChange = (e) => {
     setPrompt(e.target.value);
   };
@@ -110,7 +107,7 @@ function App() {
                   <div className="flex w-full items-center justify-between md:w-auto">
                     <a href="#">
                       <span className="sr-only">Teachers Aid</span>
-                      <p>Teachers Aid ✏️</p>
+                      <p className="text-indigo-700">Teachers Aid ✏️</p>
                     </a>
                     
                   </div>
@@ -134,7 +131,7 @@ function App() {
                     href="#"
                     className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"
                   >
-                    <PopupInfo />
+                    <Modal />
                   </a>
                 </div>
                 
@@ -157,7 +154,7 @@ function App() {
     <div>
     
     
-  </div>
+    </div>
       <header>
         <h1 className="text-center  mt-9 font-mono text-3xl text-indigo-600">
           Features
@@ -166,7 +163,7 @@ function App() {
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
       
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Teacher's Aid</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-indigo-700 sm:text-4xl">Teacher's Aid</h2>
           <p className="mt-4 text-gray-500">
           Do you know that a research showed that (92%) in our study out today said they 
           don’t have enough time to prepare effectively for classroom teaching? 
@@ -205,33 +202,35 @@ function App() {
         </div>
       </div>
     </div>        
- 
+              
 
-        <div className=" mx-auto grid max-w-2xl items-center mb-4">
-        <h1 className="text-center mb-4 font-mono text-3xl text-indigo-600">
-          Check dates 
-        </h1>
-        <div className=' mx-auto grid max-w-2xl items-center font-mono '>
-        <Calendar
-          onChange={setDate}
-          value={date}
-          selectRange={true}
-        />
-      </div>
-      {date.length > 0 ? (
-        <p className='text-center font-mono'>
-          <span className='font-mono text-green-700 bold'>Start:</span>{' '}
-          {date[0].toDateString()}
-          &nbsp;|&nbsp;
-          <span className='font-mono text-red-700 bold'>End:</span> {date[1].toDateString()}
-        </p>
-      ) : (
-        <p className='text-center px-3 py-1 mt-2 rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 cursor-pointer'>
-          <span className='bold'>Selected date:</span>{' '}
-          {date.toDateString()}
-        </p>
-      )}
-    </div>
+
+
+    <div className=" mx-auto grid max-w-2xl items-center mb-4">
+    <h1 className="text-center mb-4 font-mono text-3xl text-indigo-600">
+      Check dates 
+    </h1>
+    <div className=' mx-auto grid max-w-2xl items-center font-mono '>
+    <Calendar
+      onChange={setDate}
+      value={date}
+      selectRange={true}
+    />
+  </div>
+  {date.length > 0 ? (
+    <p className='text-center font-mono'>
+      <span className='font-mono text-green-700 bold'>Start:</span>{' '}
+      {date[0].toDateString()}
+      &nbsp;|&nbsp;
+      <span className='font-mono text-red-700 bold'>End:</span> {date[1].toDateString()}
+    </p>
+  ) : (
+    <p className='text-center px-3 py-1 mt-2 rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 cursor-pointer'>
+      <span className='bold'>Selected date:</span>{' '}
+      {date.toDateString()}
+    </p>
+  )}
+</div>
 
 
       <div id="create" className=" mx-auto grid max-w-2xl grid-cols-1 items-center">
@@ -298,7 +297,7 @@ function App() {
           ))}
       </div>
       
-      <footer className="footer">
+      <footer className="footer ease-linear">
         <p className="text-center mt-4 mb-5 font-mono text-1x1 text-black-700/70">© 2022 Teachers Aid. All rights reserved.</p>
       </footer>
     </div>
